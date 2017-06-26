@@ -124,8 +124,8 @@
   -webkit-transform: translate(-20px, -10px);
       -ms-transform: translate(-20px, -10px);
           transform: translate(-20px, -10px);
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
 
 @-webkit-keyframes coffee {
   80% {
@@ -150,8 +150,8 @@
   -webkit-transform-origin: 80% 80%;
       -ms-transform-origin: 80% 80%;
           transform-origin: 80% 80%;
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
 
 @-webkit-keyframes smokes {
   80% {
@@ -176,8 +176,8 @@
   -webkit-transform: translate(-20px, -10px);
       -ms-transform: translate(-20px, -10px);
           transform: translate(-20px, -10px);
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
 
 @-webkit-keyframes forehand {
   80% {
@@ -198,8 +198,8 @@
           animation-iteration-count: 2;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
 
 @-webkit-keyframes head-boss {
   80% {
@@ -220,8 +220,8 @@
           animation-iteration-count: 2;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
 
 @-webkit-keyframes mouth-boss {
   80% {
@@ -232,3 +232,25 @@
   80% {
     -webkit-transform: skewX(3deg);
             transform: skewX(3deg); } }
+
+#eyebrows {
+  -webkit-animation-name: eyebrows-boss;
+          animation-name: eyebrows-boss;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
+
+@-webkit-keyframes eyebrows-boss {
+  80% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px); } }
+
+@keyframes eyebrows-boss {
+  80% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px); } }

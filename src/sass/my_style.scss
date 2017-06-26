@@ -67,7 +67,7 @@
     @include animation-mixin(coffee, 5s, 2, ease);
     transform-origin: 80% 80%;
     transform: translate(-20px, -10px);
-    animation-delay: 30s;
+    animation-delay: 5s;
 }
 
 @keyframes coffee {
@@ -80,7 +80,7 @@
 #smoke1 {
     @include animation-mixin(smokes, 5s, 2, ease);
     transform-origin: 80% 80%;
-    animation-delay: 30s;
+    animation-delay: 5s;
 }
 
 @keyframes smokes {
@@ -94,7 +94,7 @@
 #biceps {
     @include animation-mixin(forehand, 5s, 2, ease);
     transform: translate(-20px, -10px);
-    animation-delay: 30s;
+    animation-delay: 5s;
 }
 
 @keyframes forehand {
@@ -106,7 +106,7 @@
 //************ HEAD OF THE BOSS ************
 #head {
     @include animation-mixin(head-boss, 5s, 2, ease);
-    animation-delay: 30s;
+    animation-delay: 5s;
 }
 
 @keyframes head-boss {
@@ -118,11 +118,22 @@
 //************ MOUTH OF THE BOSS ************
 #mouth {
     @include animation-mixin(mouth-boss, 5s, 2, ease);
-    animation-delay: 30s;
+    animation-delay: 5s;
 }
 
 @keyframes mouth-boss {
     80% {
         transform: skewX(3deg);
+    }
+}
+//************ EYEBROWS OF THE BOSS ************
+#eyebrows {
+   @include animation-mixin(eyebrows-boss, 5s, 2, ease);
+    animation-delay: 5s;
+}
+
+@keyframes eyebrows-boss {
+    80% {
+        transform: translateY(-5px);
     }
 }
