@@ -1,0 +1,50 @@
+.svg-image {
+  width: 900px; }
+
+#eyes {
+  -webkit-animation-name: eyes;
+          animation-name: eyes;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease; }
+
+@-webkit-keyframes eyes {
+  0%,
+  30% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px); }
+  30%,
+  40% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px); }
+  60% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px); }
+  80% {
+    visibility: hidden;
+    opacity: 0.8s; }
+  100% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px); } }
+
+@keyframes eyes {
+  0%,
+  30% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px); }
+  30%,
+  40% {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px); }
+  60% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px); }
+  80% {
+    visibility: hidden;
+    opacity: 0.8s; }
+  100% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px); } }

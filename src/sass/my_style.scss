@@ -1,0 +1,31 @@
+.svg-image {
+    width: 900px;
+}
+
+#eyes {
+    animation-name: eyes;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes eyes {
+    0%,
+    30% {
+        transform: translateY(2px);
+    }
+    30%,
+    40% {
+        transform: translateY(3px);
+    }
+    60% {
+        transform: translateY(4px);
+    }
+    80% {
+        visibility: hidden;
+        opacity: 0.8s;
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
