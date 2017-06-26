@@ -273,24 +273,21 @@
 @-webkit-keyframes phone {
   50% {
     -webkit-transform: skewY(2deg);
-            transform: skewY(2deg);
-    fill: white; }
+            transform: skewY(2deg); }
   100% {
     -webkit-transform: skewY(3deg);
-            transform: skewY(3deg);
-    fill: black; } }
+            transform: skewY(3deg); } }
 
 @keyframes phone {
   50% {
     -webkit-transform: skewY(2deg);
-            transform: skewY(2deg);
-    fill: white; }
+            transform: skewY(2deg); }
   100% {
     -webkit-transform: skewY(3deg);
-            transform: skewY(3deg);
-    fill: black; } }
+            transform: skewY(3deg); } }
 
-#phone .st10, #shadow_phone .st10 {
+#phone .st10,
+#shadow_phone .st10 {
   -webkit-animation-name: phone-display;
           animation-name: phone-display;
   -webkit-animation-duration: 1s;
@@ -300,10 +297,7 @@
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-  -webkit-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%; }
+          animation-delay: 5s; }
 
 @-webkit-keyframes phone-display {
   50% {
@@ -316,3 +310,26 @@
     fill: #DCDCDC; }
   100% {
     fill: #62627F; } }
+
+#shoe_1 {
+  -webkit-animation-name: shoeL-boss;
+          animation-name: shoeL-boss;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 6;
+          animation-iteration-count: 6;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
+
+@-webkit-keyframes shoeL-boss {
+  50% {
+    -webkit-transform: skewX(3deg);
+            transform: skewX(3deg); } }
+
+@keyframes shoeL-boss {
+  50% {
+    -webkit-transform: skewX(3deg);
+            transform: skewX(3deg); } }

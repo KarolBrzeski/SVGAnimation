@@ -142,37 +142,47 @@
 // ******************************** Animation of the calling phone *******************************
 //************ PHONE ************
 #phone {
-        @include animation-mixin(phone, 0.5s, 20, ease);
-        animation-delay: 5s;
-        transform-origin: 50% 50%;
+    @include animation-mixin(phone, 0.5s, 20, ease);
+    animation-delay: 5s;
+    transform-origin: 50% 50%;
 }
 
 @keyframes phone {
     50% {
         transform: skewY(2deg);
-        fill: white;
     }
     100% {
         transform: skewY(3deg);
-        fill: black;
     }
 }
 
 //************ PHONE DISPLAY ************
-#phone, #shadow_phone {
+#phone,
+#shadow_phone {
     .st10 {
         @include animation-mixin(phone-display, 1s, 10, ease);
         animation-delay: 5s;
-        transform-origin: 50% 50%;
     }
 }
 
 @keyframes phone-display {
     50% {
-
         fill: #DCDCDC;
     }
     100% {
         fill: #62627F;
+    }
+}
+
+// ******************************** Animation of shoe movement *******************************
+//************ SHOE OF THE BOSS ************
+#shoe_1 {
+    @include animation-mixin(shoeL-boss, 1s, 6, ease);
+    transform-origin: 50% 50%;
+}
+
+@keyframes shoeL-boss {
+    50% {
+        transform: skewX(3deg);
     }
 }
