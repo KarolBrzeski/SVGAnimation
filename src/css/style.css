@@ -27,8 +27,8 @@
   81% {
     visibility: hidden; }
   100% {
-    -webkit-transform: translateY(-8px);
-            transform: translateY(-8px); } }
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px); } }
 
 @keyframes eyes-boss {
   0%,
@@ -46,8 +46,8 @@
   81% {
     visibility: hidden; }
   100% {
-    -webkit-transform: translateY(-8px);
-            transform: translateY(-8px); } }
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px); } }
 
 #eye {
   -webkit-animation-name: eye-employee;
@@ -124,8 +124,8 @@
   -webkit-transform: translate(-20px, -10px);
       -ms-transform: translate(-20px, -10px);
           transform: translate(-20px, -10px);
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s; }
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
 
 @-webkit-keyframes coffee {
   80% {
@@ -150,18 +150,18 @@
   -webkit-transform-origin: 80% 80%;
       -ms-transform-origin: 80% 80%;
           transform-origin: 80% 80%;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s; }
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
 
 @-webkit-keyframes smokes {
   80% {
-    -webkit-transform: rotate(65deg);
-            transform: rotate(65deg); } }
+    -webkit-transform: rotate(-65deg);
+            transform: rotate(-65deg); } }
 
 @keyframes smokes {
   80% {
-    -webkit-transform: rotate(65deg);
-            transform: rotate(65deg); } }
+    -webkit-transform: rotate(-65deg);
+            transform: rotate(-65deg); } }
 
 #forehand,
 #biceps {
@@ -176,8 +176,8 @@
   -webkit-transform: translate(-20px, -10px);
       -ms-transform: translate(-20px, -10px);
           transform: translate(-20px, -10px);
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s; }
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
 
 @-webkit-keyframes forehand {
   80% {
@@ -198,8 +198,8 @@
           animation-iteration-count: 2;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s; }
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
 
 @-webkit-keyframes head-boss {
   80% {
@@ -220,8 +220,8 @@
           animation-iteration-count: 2;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s; }
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
 
 @-webkit-keyframes mouth-boss {
   80% {
@@ -242,8 +242,8 @@
           animation-iteration-count: 2;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s; }
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
 
 @-webkit-keyframes eyebrows-boss {
   80% {
@@ -254,3 +254,65 @@
   80% {
     -webkit-transform: translateY(-5px);
             transform: translateY(-5px); } }
+
+#phone {
+  -webkit-animation-name: phone;
+          animation-name: phone;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 20;
+          animation-iteration-count: 20;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
+
+@-webkit-keyframes phone {
+  50% {
+    -webkit-transform: skewY(2deg);
+            transform: skewY(2deg);
+    fill: white; }
+  100% {
+    -webkit-transform: skewY(3deg);
+            transform: skewY(3deg);
+    fill: black; } }
+
+@keyframes phone {
+  50% {
+    -webkit-transform: skewY(2deg);
+            transform: skewY(2deg);
+    fill: white; }
+  100% {
+    -webkit-transform: skewY(3deg);
+            transform: skewY(3deg);
+    fill: black; } }
+
+#phone .st10, #shadow_phone .st10 {
+  -webkit-animation-name: phone-display;
+          animation-name: phone-display;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 10;
+          animation-iteration-count: 10;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
+
+@-webkit-keyframes phone-display {
+  50% {
+    fill: #DCDCDC; }
+  100% {
+    fill: #62627F; } }
+
+@keyframes phone-display {
+  50% {
+    fill: #DCDCDC; }
+  100% {
+    fill: #62627F; } }
