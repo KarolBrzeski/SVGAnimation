@@ -1,0 +1,7 @@
+// Animation properties
+@mixin animation-mixin($name, $duration, $iteration: infinite, $timing_fun: linear) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-iteration-count: $iteration;
+    animation-timing-function: $timing_fun;
+}

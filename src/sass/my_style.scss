@@ -2,14 +2,12 @@
     width: 900px;
 }
 
+//************ EYES OF THE BOSS ************
 #eyes {
-    animation-name: eyes;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
+    @include animation-mixin(eyes-boss, 15s, infinite, ease);
 }
 
-@keyframes eyes {
+@keyframes eyes-boss {
     0%,
     30% {
         transform: translateY(2px);
@@ -21,11 +19,110 @@
     60% {
         transform: translateY(4px);
     }
-    80% {
+    80%,
+    81% {
         visibility: hidden;
-        opacity: 0.8s;
     }
     100% {
         transform: translateY(-8px);
+    }
+}
+
+//************ EYE OF THE EMPLOYEE ************
+#eye {
+    @include animation-mixin(eye-employee, 10s, infinite, ease);
+}
+
+@keyframes eye-employee {
+    60%,
+    61% {
+        visibility: hidden;
+    }
+}
+
+// ******************************** Animation of coffee drinking *******************************
+//************ SMOKE FROM CUP ************
+#smoke1 {
+    @include animation-mixin(smoke1, 3.5s, infinite, ease);
+}
+
+#smoke2 {
+    @include animation-mixin(smoke2, 3s, infinite, ease);
+}
+
+@keyframes smoke1 {
+    50% {
+        transform: translate(2px, 5px);
+    }
+}
+
+@keyframes smoke2 {
+    50% {
+        transform: translate(3px, 4px);
+    }
+}
+
+//************ COFFEE ************
+#coffee_mug {
+    @include animation-mixin(coffee, 5s, 2, ease);
+    transform-origin: 80% 80%;
+    transform: translate(-20px, -10px);
+    animation-delay: 30s;
+}
+
+@keyframes coffee {
+    80% {
+        transform: rotate(-15deg);
+    }
+}
+
+#smoke2,
+#smoke1 {
+    @include animation-mixin(smokes, 5s, 2, ease);
+    transform-origin: 80% 80%;
+    animation-delay: 30s;
+}
+
+@keyframes smokes {
+    80% {
+        transform: rotate(65deg);
+    }
+}
+
+//************ HAND OF THE BOSS ************
+#forehand,
+#biceps {
+    @include animation-mixin(forehand, 5s, 2, ease);
+    transform: translate(-20px, -10px);
+    animation-delay: 30s;
+}
+
+@keyframes forehand {
+    80% {
+        transform: translateY(0px);
+    }
+}
+
+//************ HEAD OF THE BOSS ************
+#head {
+    @include animation-mixin(head-boss, 5s, 2, ease);
+    animation-delay: 30s;
+}
+
+@keyframes head-boss {
+    80% {
+        transform: skewX(2deg);
+    }
+}
+
+//************ MOUTH OF THE BOSS ************
+#mouth {
+    @include animation-mixin(mouth-boss, 5s, 2, ease);
+    animation-delay: 30s;
+}
+
+@keyframes mouth-boss {
+    80% {
+        transform: skewX(3deg);
     }
 }

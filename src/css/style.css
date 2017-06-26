@@ -2,8 +2,8 @@
   width: 900px; }
 
 #eyes {
-  -webkit-animation-name: eyes;
-          animation-name: eyes;
+  -webkit-animation-name: eyes-boss;
+          animation-name: eyes-boss;
   -webkit-animation-duration: 15s;
           animation-duration: 15s;
   -webkit-animation-iteration-count: infinite;
@@ -11,7 +11,7 @@
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease; }
 
-@-webkit-keyframes eyes {
+@-webkit-keyframes eyes-boss {
   0%,
   30% {
     -webkit-transform: translateY(2px);
@@ -23,14 +23,14 @@
   60% {
     -webkit-transform: translateY(4px);
             transform: translateY(4px); }
-  80% {
-    visibility: hidden;
-    opacity: 0.8s; }
+  80%,
+  81% {
+    visibility: hidden; }
   100% {
     -webkit-transform: translateY(-8px);
             transform: translateY(-8px); } }
 
-@keyframes eyes {
+@keyframes eyes-boss {
   0%,
   30% {
     -webkit-transform: translateY(2px);
@@ -42,9 +42,193 @@
   60% {
     -webkit-transform: translateY(4px);
             transform: translateY(4px); }
-  80% {
-    visibility: hidden;
-    opacity: 0.8s; }
+  80%,
+  81% {
+    visibility: hidden; }
   100% {
     -webkit-transform: translateY(-8px);
             transform: translateY(-8px); } }
+
+#eye {
+  -webkit-animation-name: eye-employee;
+          animation-name: eye-employee;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease; }
+
+@-webkit-keyframes eye-employee {
+  60%,
+  61% {
+    visibility: hidden; } }
+
+@keyframes eye-employee {
+  60%,
+  61% {
+    visibility: hidden; } }
+
+#smoke1 {
+  -webkit-animation-name: smoke1;
+          animation-name: smoke1;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease; }
+
+#smoke2 {
+  -webkit-animation-name: smoke2;
+          animation-name: smoke2;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease; }
+
+@-webkit-keyframes smoke1 {
+  50% {
+    -webkit-transform: translate(2px, 5px);
+            transform: translate(2px, 5px); } }
+
+@keyframes smoke1 {
+  50% {
+    -webkit-transform: translate(2px, 5px);
+            transform: translate(2px, 5px); } }
+
+@-webkit-keyframes smoke2 {
+  50% {
+    -webkit-transform: translate(3px, 4px);
+            transform: translate(3px, 4px); } }
+
+@keyframes smoke2 {
+  50% {
+    -webkit-transform: translate(3px, 4px);
+            transform: translate(3px, 4px); } }
+
+#coffee_mug {
+  -webkit-animation-name: coffee;
+          animation-name: coffee;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-transform-origin: 80% 80%;
+      -ms-transform-origin: 80% 80%;
+          transform-origin: 80% 80%;
+  -webkit-transform: translate(-20px, -10px);
+      -ms-transform: translate(-20px, -10px);
+          transform: translate(-20px, -10px);
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
+
+@-webkit-keyframes coffee {
+  80% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg); } }
+
+@keyframes coffee {
+  80% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg); } }
+
+#smoke2,
+#smoke1 {
+  -webkit-animation-name: smokes;
+          animation-name: smokes;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-transform-origin: 80% 80%;
+      -ms-transform-origin: 80% 80%;
+          transform-origin: 80% 80%;
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
+
+@-webkit-keyframes smokes {
+  80% {
+    -webkit-transform: rotate(65deg);
+            transform: rotate(65deg); } }
+
+@keyframes smokes {
+  80% {
+    -webkit-transform: rotate(65deg);
+            transform: rotate(65deg); } }
+
+#forehand,
+#biceps {
+  -webkit-animation-name: forehand;
+          animation-name: forehand;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-transform: translate(-20px, -10px);
+      -ms-transform: translate(-20px, -10px);
+          transform: translate(-20px, -10px);
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
+
+@-webkit-keyframes forehand {
+  80% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@keyframes forehand {
+  80% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+#head {
+  -webkit-animation-name: head-boss;
+          animation-name: head-boss;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
+
+@-webkit-keyframes head-boss {
+  80% {
+    -webkit-transform: skewX(2deg);
+            transform: skewX(2deg); } }
+
+@keyframes head-boss {
+  80% {
+    -webkit-transform: skewX(2deg);
+            transform: skewX(2deg); } }
+
+#mouth {
+  -webkit-animation-name: mouth-boss;
+          animation-name: mouth-boss;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s; }
+
+@-webkit-keyframes mouth-boss {
+  80% {
+    -webkit-transform: skewX(3deg);
+            transform: skewX(3deg); } }
+
+@keyframes mouth-boss {
+  80% {
+    -webkit-transform: skewX(3deg);
+            transform: skewX(3deg); } }
