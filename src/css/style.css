@@ -333,3 +333,23 @@
   50% {
     -webkit-transform: skewX(3deg);
             transform: skewX(3deg); } }
+
+#trees {
+  -webkit-animation-name: trees;
+          animation-name: trees;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease; }
+
+@-webkit-keyframes trees {
+  50% {
+    -webkit-transform: translate(-4px, 6px);
+            transform: translate(-4px, 6px); } }
+
+@keyframes trees {
+  50% {
+    -webkit-transform: translate(-4px, 6px);
+            transform: translate(-4px, 6px); } }

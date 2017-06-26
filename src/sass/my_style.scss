@@ -186,3 +186,15 @@
         transform: skewX(3deg);
     }
 }
+
+// ******************************** Animation of the trees *******************************
+//************ THE TREES ************
+#trees {
+    @include animation-mixin(trees, 3s, infinite, ease);
+}
+
+@keyframes trees {
+    50% {
+        transform: translate(-4px, 6px)
+    }
+}
