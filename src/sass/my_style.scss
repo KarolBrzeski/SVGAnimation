@@ -67,7 +67,7 @@
     @include animation-mixin(coffee, 5s, 2, ease);
     transform-origin: 80% 80%;
     transform: translate(-20px, -10px);
-    animation-delay: 30s;
+    animation-delay: 3s;
 }
 
 @keyframes coffee {
@@ -76,11 +76,10 @@
     }
 }
 
-#smoke2,
-#smoke1 {
+#smoke {
     @include animation-mixin(smokes, 5s, 2, ease);
     transform-origin: 80% 80%;
-    animation-delay: 30s;
+    animation-delay: 3s;
 }
 
 @keyframes smokes {
@@ -89,12 +88,26 @@
     }
 }
 
+// ************ HAND WHICH HOLDS THE PAPER ************
+#hand_paper,
+#paper {
+    @include animation-mixin(handpaper, 5s, 2, ease);
+    transform-origin: 0% 50%;
+    animation-delay: 3s;
+}
+
+@keyframes handpaper {
+    80% {
+        transform: rotate(10deg);
+    }
+}
+
 //************ HAND OF THE BOSS ************
 #forehand,
 #biceps {
     @include animation-mixin(forehand, 5s, 2, ease);
     transform: translate(-20px, -10px);
-    animation-delay: 30s;
+    animation-delay: 3s;
 }
 
 @keyframes forehand {
@@ -106,7 +119,7 @@
 //************ HEAD OF THE BOSS ************
 #head {
     @include animation-mixin(head-boss, 5s, 2, ease);
-    animation-delay: 30s;
+    animation-delay: 3s;
 }
 
 @keyframes head-boss {
@@ -118,7 +131,7 @@
 //************ MOUTH OF THE BOSS ************
 #mouth {
     @include animation-mixin(mouth-boss, 5s, 2, ease);
-    animation-delay: 30s;
+    animation-delay: 3s;
 }
 
 @keyframes mouth-boss {
@@ -130,12 +143,15 @@
 //************ EYEBROWS OF THE BOSS ************
 #eyebrows {
     @include animation-mixin(eyebrows-boss, 5s, 2, ease);
-    animation-delay: 30s;
+    animation-delay: 3s;
 }
 
 @keyframes eyebrows-boss {
     80% {
         transform: translateY(-5px);
+    }
+    90% {
+        transform: translateY(-4px);
     }
 }
 
@@ -143,7 +159,7 @@
 //************ PHONE ************
 #phone {
     @include animation-mixin(phone, 0.5s, 20, ease);
-    animation-delay: 5s;
+    animation-delay: 8s;
     transform-origin: 50% 50%;
 }
 
@@ -161,7 +177,7 @@
 #shadow_phone {
     .st10 {
         @include animation-mixin(phone-display, 1s, 10, ease);
-        animation-delay: 5s;
+        animation-delay: 8s;
     }
 }
 
@@ -175,13 +191,25 @@
 }
 
 // ******************************** Animation of shoe movement *******************************
-//************ SHOE OF THE BOSS ************
+//************ SHOES OF THE BOSS ************
 #shoe_1 {
     @include animation-mixin(shoeL-boss, 1s, 6, ease);
     transform-origin: 50% 50%;
 }
 
 @keyframes shoeL-boss {
+    50% {
+        transform: skewX(3deg);
+    }
+}
+
+#shoe_2 {
+    @include animation-mixin(shoeR-boss, 1s, 8, ease);
+    animation-delay: 15s;
+    transform-origin: 50% 50%;
+}
+
+@keyframes shoeR-boss {
     50% {
         transform: skewX(3deg);
     }
@@ -196,5 +224,67 @@
 @keyframes trees {
     50% {
         transform: translate(-4px, 6px)
+    }
+}
+
+// ******************************** Animation of the employee *******************************
+//************ THE HEAD OF THE EMPLOYEE ************
+#ginger_head {
+    @include animation-mixin(head-employee, 25s, 1, ease);
+    animation-delay: 5s;
+    transform-origin: 50% 50%;
+}
+
+@keyframes head-employee {
+    50% {
+        transform: rotate(-15deg);
+    }
+}
+
+//************ THE SUIT OF THE EMPLOYEE ************
+#base,
+#collar,
+#white_collar {
+    @include animation-mixin(base-suit, 25s, 1, ease);
+    animation-delay: 5s;
+    transform-origin: 50% 50%;
+}
+
+@keyframes base-suit {
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+//************ PAPERS OF THE TABLE ************
+#papers {
+    transform: translate(150px, 15px);
+}
+
+//************ ARM OF THE EMPLOYEE ************
+#hand,
+#white_shirt,
+#suit_arm,
+#buttons {
+    @include animation-mixin(arm-employee, 5s, 1, ease);
+    animation-delay: 8s;
+}
+
+@keyframes arm-employee {
+    50% {
+        transform: translate(-20px, -15px);
+    }
+}
+
+//************ SHADOW OF ARM OF THE EMPLOYEE ************
+#arm_shadow {
+    @include animation-mixin(arm-shadow, 5s, 1, ease);
+    transform-origin: 50% 50%;
+    animation-delay: 8s;
+}
+
+@keyframes arm-shadow {
+    50% {
+        transform: rotate(35deg);
     }
 }

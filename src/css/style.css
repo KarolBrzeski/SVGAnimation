@@ -124,8 +124,8 @@
   -webkit-transform: translate(-20px, -10px);
       -ms-transform: translate(-20px, -10px);
           transform: translate(-20px, -10px);
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
 
 @-webkit-keyframes coffee {
   80% {
@@ -137,8 +137,7 @@
     -webkit-transform: rotate(-15deg);
             transform: rotate(-15deg); } }
 
-#smoke2,
-#smoke1 {
+#smoke {
   -webkit-animation-name: smokes;
           animation-name: smokes;
   -webkit-animation-duration: 5s;
@@ -150,8 +149,8 @@
   -webkit-transform-origin: 80% 80%;
       -ms-transform-origin: 80% 80%;
           transform-origin: 80% 80%;
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
 
 @-webkit-keyframes smokes {
   80% {
@@ -162,6 +161,32 @@
   80% {
     -webkit-transform: rotate(-65deg);
             transform: rotate(-65deg); } }
+
+#hand_paper,
+#paper {
+  -webkit-animation-name: handpaper;
+          animation-name: handpaper;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
+
+@-webkit-keyframes handpaper {
+  80% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg); } }
+
+@keyframes handpaper {
+  80% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg); } }
 
 #forehand,
 #biceps {
@@ -176,8 +201,8 @@
   -webkit-transform: translate(-20px, -10px);
       -ms-transform: translate(-20px, -10px);
           transform: translate(-20px, -10px);
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
 
 @-webkit-keyframes forehand {
   80% {
@@ -198,8 +223,8 @@
           animation-iteration-count: 2;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
 
 @-webkit-keyframes head-boss {
   80% {
@@ -220,8 +245,8 @@
           animation-iteration-count: 2;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
 
 @-webkit-keyframes mouth-boss {
   80% {
@@ -242,18 +267,24 @@
           animation-iteration-count: 2;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 30s;
-          animation-delay: 30s; }
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
 
 @-webkit-keyframes eyebrows-boss {
   80% {
     -webkit-transform: translateY(-5px);
-            transform: translateY(-5px); } }
+            transform: translateY(-5px); }
+  90% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px); } }
 
 @keyframes eyebrows-boss {
   80% {
     -webkit-transform: translateY(-5px);
-            transform: translateY(-5px); } }
+            transform: translateY(-5px); }
+  90% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px); } }
 
 #phone {
   -webkit-animation-name: phone;
@@ -264,8 +295,8 @@
           animation-iteration-count: 20;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
   -webkit-transform-origin: 50% 50%;
       -ms-transform-origin: 50% 50%;
           transform-origin: 50% 50%; }
@@ -296,8 +327,8 @@
           animation-iteration-count: 10;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s; }
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s; }
 
 @-webkit-keyframes phone-display {
   50% {
@@ -334,6 +365,31 @@
     -webkit-transform: skewX(3deg);
             transform: skewX(3deg); } }
 
+#shoe_2 {
+  -webkit-animation-name: shoeR-boss;
+          animation-name: shoeR-boss;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 8;
+          animation-iteration-count: 8;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
+
+@-webkit-keyframes shoeR-boss {
+  50% {
+    -webkit-transform: skewX(3deg);
+            transform: skewX(3deg); } }
+
+@keyframes shoeR-boss {
+  50% {
+    -webkit-transform: skewX(3deg);
+            transform: skewX(3deg); } }
+
 #trees {
   -webkit-animation-name: trees;
           animation-name: trees;
@@ -353,3 +409,110 @@
   50% {
     -webkit-transform: translate(-4px, 6px);
             transform: translate(-4px, 6px); } }
+
+#ginger_head {
+  -webkit-animation-name: head-employee;
+          animation-name: head-employee;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
+
+@-webkit-keyframes head-employee {
+  50% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg); } }
+
+@keyframes head-employee {
+  50% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg); } }
+
+#base,
+#collar,
+#white_collar {
+  -webkit-animation-name: base-suit;
+          animation-name: base-suit;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
+
+@-webkit-keyframes base-suit {
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); } }
+
+@keyframes base-suit {
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); } }
+
+#papers {
+  -webkit-transform: translate(150px, 15px);
+      -ms-transform: translate(150px, 15px);
+          transform: translate(150px, 15px); }
+
+#hand,
+#white_shirt,
+#suit_arm,
+#buttons {
+  -webkit-animation-name: arm-employee;
+          animation-name: arm-employee;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s; }
+
+@-webkit-keyframes arm-employee {
+  50% {
+    -webkit-transform: translate(-20px, -15px);
+            transform: translate(-20px, -15px); } }
+
+@keyframes arm-employee {
+  50% {
+    -webkit-transform: translate(-20px, -15px);
+            transform: translate(-20px, -15px); } }
+
+#arm_shadow {
+  -webkit-animation-name: arm-shadow;
+          animation-name: arm-shadow;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s; }
+
+@-webkit-keyframes arm-shadow {
+  50% {
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg); } }
+
+@keyframes arm-shadow {
+  50% {
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg); } }
