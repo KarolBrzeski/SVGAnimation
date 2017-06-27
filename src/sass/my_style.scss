@@ -21,24 +21,24 @@
     @include animation-mixin(eyes-boss, 15s, infinite, ease);
 }
 
-@keyframes eyes-boss {
+@include keyframes(eyes-boss) {
     0%,
     30% {
-        transform: translateY(2px);
+        @include translateY-mixin(2px);
     }
     30%,
     40% {
-        transform: translateY(3px);
+        @include translateY-mixin(3px);
     }
     60% {
-        transform: translateY(4px);
+        @include translateY-mixin(4px);
     }
     80%,
     81% {
         visibility: hidden;
     }
     100% {
-        transform: translateY(-7px);
+        @include translateY-mixin(-7px);
     }
 }
 
@@ -50,13 +50,13 @@
 #neck,
 #legs {
     @include animation-mixin(red_armchair, 3s, infinite, ease);
-    transform-origin: 50% 50%;
-    animation-delay: 13s;
+    @include transform-origin-mixin(50%, 50%);
+    @include animation-delay-mixin(13s);
 }
 
-@keyframes red_armchair {
+@include keyframes(red_armchair) {
     50% {
-        transform: skewX(1deg);
+        @include skewX-mixin(1deg);
     }
 }
 
@@ -70,41 +70,41 @@
     @include animation-mixin(smoke2, 3s, infinite, ease);
 }
 
-@keyframes smoke1 {
+@include keyframes(smoke1) {
     50% {
-        transform: translate(3px, 6px);
+        @include translate-mixin(3px, 6px);
     }
 }
 
-@keyframes smoke2 {
+@include keyframes(smoke2) {
     50% {
-        transform: translate(4px, 5px);
+        @include translate-mixin(4px, 5px);
     }
 }
 
 //************ COFFEE ************
 #coffee_mug {
     @include animation-mixin(coffee, 5s, 2, ease);
-    transform-origin: 80% 80%;
-    transform: translate(-20px, -10px);
-    animation-delay: 3s;
+    @include transform-origin-mixin(80%, 80%);
+    @include translate-mixin(-20px, -10px);
+    @include animation-delay-mixin(3s);
 }
 
-@keyframes coffee {
+@include keyframes(coffee) {
     80% {
-        transform: rotate(-15deg);
+        @include rotate-mixin(-15deg);
     }
 }
 
 #smoke {
     @include animation-mixin(smokes, 5s, 2, ease);
-    transform-origin: 80% 80%;
-    animation-delay: 3s;
+    @include transform-origin-mixin(80%, 80%);
+    @include animation-delay-mixin(3s);
 }
 
-@keyframes smokes {
+@include keyframes(smokes) {
     80% {
-        transform: rotate(-65deg);
+        @include rotate-mixin(-65deg);
     }
 }
 
@@ -112,13 +112,13 @@
 #hand_paper,
 #paper {
     @include animation-mixin(handpaper, 5s, 2, ease);
-    transform-origin: 0% 50%;
-    animation-delay: 3s;
+    @include transform-origin-mixin(0%, 50%);
+    @include animation-delay-mixin(3s);
 }
 
-@keyframes handpaper {
+@include keyframes(handpaper) {
     80% {
-        transform: rotate(10deg);
+        @include rotate-mixin(10deg);
     }
 }
 
@@ -126,52 +126,52 @@
 #forehand,
 #biceps {
     @include animation-mixin(forehand, 5s, 2, ease);
-    transform: translate(-20px, -10px);
-    animation-delay: 3s;
+    @include translate-mixin(-20px, -10px);
+    @include animation-delay-mixin(3s);
 }
 
-@keyframes forehand {
+@include keyframes(forehand) {
     80% {
-        transform: translateY(0px);
+        @include translateY-mixin(0px);
     }
 }
 
 //************ HEAD OF THE BOSS ************
 #head {
     @include animation-mixin(head-boss, 5s, 2, ease);
-    animation-delay: 3s;
+    @include animation-delay-mixin(3s);
 }
 
-@keyframes head-boss {
+@include keyframes(head-boss) {
     80% {
-        transform: skewX(2deg);
+        @include skewX-mixin(2deg);
     }
 }
 
 //************ MOUTH OF THE BOSS ************
 #mouth {
     @include animation-mixin(mouth-boss, 5s, 2, ease);
-    animation-delay: 3s;
+    @include animation-delay-mixin(3s);
 }
 
-@keyframes mouth-boss {
+@include keyframes(mouth-boss) {
     80% {
-        transform: skewX(3deg);
+        @include skewX-mixin(3deg);
     }
 }
 
 //************ EYEBROWS OF THE BOSS ************
 #eyebrows {
     @include animation-mixin(eyebrows-boss, 5s, 2, ease);
-    animation-delay: 3s;
+    @include animation-delay-mixin(3s);
 }
 
-@keyframes eyebrows-boss {
+@include keyframes(eyebrows-boss) {
     80% {
-        transform: translateY(-5px);
+        @include translateY-mixin(-5px);
     }
     90% {
-        transform: translateY(-4px);
+        @include translateY-mixin(-4px);
     }
 }
 
@@ -179,16 +179,16 @@
 //************ PHONE ************
 #phone {
     @include animation-mixin(phone, 0.5s, 20, ease);
-    animation-delay: 9s;
-    transform-origin: 50% 50%;
+    @include animation-delay-mixin(9);
+    @include transform-origin-mixin(50%, 50%);
 }
 
-@keyframes phone {
+@include keyframes(phone) {
     50% {
-        transform: skewY(2deg);
+        @include skewY-mixin(2deg);
     }
     100% {
-        transform: skewY(3deg);
+        @include skewY-mixin(3deg);
     }
 }
 
@@ -197,11 +197,11 @@
 #shadow_phone {
     .st10 {
         @include animation-mixin(phone-display, 1s, 10, ease);
-        animation-delay: 9s;
+        @include animation-delay-mixin(9s);
     }
 }
 
-@keyframes phone-display {
+@include keyframes(phone-display) {
     50% {
         fill: #DCDCDC;
     }
@@ -214,24 +214,24 @@
 //************ SHOES OF THE BOSS ************
 #shoe_1 {
     @include animation-mixin(shoeL-boss, 1s, 6, ease);
-    transform-origin: 50% 50%;
+    @include transform-origin-mixin(50%, 50%);
 }
 
-@keyframes shoeL-boss {
+@include keyframes(shoeL-boss) {
     50% {
-        transform: skewX(3deg);
+        @include skewX-mixin(3deg);
     }
 }
 
 #shoe_2 {
     @include animation-mixin(shoeR-boss, 1s, 8, ease);
-    animation-delay: 15s;
-    transform-origin: 50% 50%;
+    @include animation-delay-mixin(15s);
+    @include transform-origin-mixin(50%, 50%);
 }
 
-@keyframes shoeR-boss {
+@include keyframes(shoeR-boss) {
     50% {
-        transform: skewX(3deg);
+        @include skewX-mixin(3deg);
     }
 }
 
@@ -241,9 +241,9 @@
     @include animation-mixin(trees, 3s, infinite, ease);
 }
 
-@keyframes trees {
+@include keyframes(trees) {
     50% {
-        transform: translate(-4px, 6px)
+        @include translate-mixin(-4px, 6px);
     }
 }
 
@@ -253,7 +253,7 @@
     @include animation-mixin(eye-employee, 10s, infinite, ease);
 }
 
-@keyframes eye-employee {
+@include keyframes(eye-employee) {
     60%,
     61% {
         visibility: hidden;
@@ -263,13 +263,13 @@
 //************ THE HEAD OF THE EMPLOYEE ************
 #ginger_head {
     @include animation-mixin(head-employee, 25s, 1, ease);
-    animation-delay: 5s;
-    transform-origin: 50% 50%;
+    @include animation-delay-mixin(5s);
+    @include transform-origin-mixin(50%, 50%);
 }
 
-@keyframes head-employee {
+@include keyframes(head-employee) {
     50% {
-        transform: rotate(-12deg);
+        @include rotate-mixin(-12deg);
     }
 }
 
@@ -278,19 +278,19 @@
 #collar,
 #white_collar {
     @include animation-mixin(base-suit, 25s, 1, ease);
-    animation-delay: 5s;
-    transform-origin: 50% 50%;
+    @include animation-delay-mixin(5s);
+    @include transform-origin-mixin(50%, 50%);
 }
 
-@keyframes base-suit {
+@include keyframes(base-suit) {
     50% {
-        transform: translateX(20px);
+        @include translateX-mixin(20px);
     }
 }
 
 //************ PAPERS OF THE TABLE ************
 #papers {
-    transform: translate(150px, 15px);
+    @include translate-mixin(150px, 15px);
 }
 
 //************ ARM OF THE EMPLOYEE ************
@@ -299,31 +299,31 @@
 #suit_arm,
 #buttons {
     @include animation-mixin(arm-employee, 5s, 1, ease);
-    animation-delay: 8s;
+    @include animation-delay-mixin(8s);
 }
 
-@keyframes arm-employee {
+@include keyframes(arm-employee) {
     23% {
-        transform: translate(-40px, -12px);
+        @include translate-mixin(-40px, -12px);
     }
     50% {
-        transform: translate(-20px, -12px);
+        @include translate-mixin(-20px, -12px);
     }
 }
 
 //************ SHADOW OF ARM OF THE EMPLOYEE ************
 #arm_shadow {
     @include animation-mixin(arm-shadow, 5s, 1, ease);
-    transform-origin: 50% 50%;
-    animation-delay: 8s;
+    @include transform-origin-mixin(50%, 50%);
+    @include animation-delay-mixin(8s);
 }
 
-@keyframes arm-shadow {
+@include keyframes(arm-shadow) {
     30% {
-        transform: rotate(38deg);
+        @include rotate-mixin(38deg);
     }
     42% {
-        transform: rotate(35deg);
+        @include rotate-mixin(35deg);
     }
 }
 
@@ -334,53 +334,53 @@
     visibility: hidden;
 }
 
-@keyframes fly {
+@include keyframes(fly){
     0% {
         visibility: visible;
     }
     50% {
-        transform: translate(550px, -40px);
+        @include translate-mixin(550px, -40px);
     }
     80% {
-        transform: translate(550px, -50px);
+        @include translate-mixin(550px, -50px);
     }
     100% {
-        transform: translate(950px, -500px);
+        @include translate-mixin(950px, -500px);
     }
 }
 
 //************ FLY WINGS ************
 #wing_1 {
     @include animation-mixin(wing_1, 0.5s, infinite, ease);
-    transform-origin: 50% 100%;
+    @include transform-origin-mixin(50%, 100%);
 }
 
-@keyframes wing_1 {
+@include keyframes(wing_1) {
     50% {
-        transform: rotate(20deg);
+        @include rotate-mixin(20deg);
     }
 }
 
 #wing_2 {
     @include animation-mixin(wing_2, 0.5s, infinite, ease);
-    transform-origin: 100% 50%;
+    @include transform-origin-mixin(100%, 50%);
 }
 
-@keyframes wing_2 {
+@include keyframes(wing_2) {
     50% {
-        transform: rotate(-20deg);
+        @include rotate-mixin(-20deg);
     }
 }
 
 //************ FLY LEGS ************
 #fly_legs {
     @include animation-mixin(fly_legs, 1s, infinite, ease);
-    transform-origin: 100% 50%;
+    @include transform-origin-mixin(100%, 50%);
 }
 
-@keyframes fly_legs {
+@include keyframes(fly_legs) {
     50% {
-        transform: rotate(15deg);
+        @include rotate-mixin(15deg);
     }
 }
 
@@ -388,20 +388,21 @@
 // ************ PEN ************
 #pen {
     @include animation-mixin(pen, 180s, 1, ease);
-    animation-delay: 8s;
-    transform: translate(310px, 30px);
+    @include animation-delay-mixin(8s);
+    @include translate-mixin(310px, 30px);
 }
 
-@keyframes pen {
-    1% {
-        transform: translate(280px, 10px);
-    }
-    50% {
-        transform: translate(280px, 10px);
-    }
+@include keyframes(pen) {
+    1%,
     100% {
-        transform: translate(280px, 10px);
+        @include translate-mixin(280px, 10px);
     }
+    // 50% {
+    //     transform: translate(280px, 10px);
+    // }
+    // 100% {
+    //     transform: translate(280px, 10px);
+    // }
 }
 
 // ************ COLOR SHADOW PEN ************
@@ -415,22 +416,22 @@
 //************ CLOCK ************
 #clock {
     @include animation-mixin(clock, 11s, 1, ease);
-    transform-origin: 100% 50%;
+    @include transform-origin-mixin(100%, 50%);
     visibility: hidden;
 }
 
-@keyframes clock {
+@include keyframes(clock) {
     0% {
         visibility: visible;
     }
     35% {
-        transform: skewX(4deg);
+        @include skewX-mixin(4deg);
     }
     50% {
-        transform: skewX(-4deg);
+        @include skewX-mixin(-4deg);
     }
     70% {
-        transform: translate(50px, 500px);
+        @include translate-mixin(50px, 500px);
     }
     70%,
     100% {
@@ -474,12 +475,12 @@
 
 #text-boss-1 {
     @include animation-mixin(text_boss_1, 5s, 1, ease);
-    animation-delay: 3s;
+    @include animation-delay-mixin(3s);
     visibility: hidden;
     position: absolute;
 }
 
-@keyframes text_boss_1 {
+@include keyframes(text_boss_1) {
     50% {
         visibility: visible;
     }
@@ -487,12 +488,12 @@
 
 #text-employee-1 {
     @include animation-mixin(text_employee_1, 8s, 1, ease);
-    animation-delay: 8s;
+    @include animation-delay-mixin(8s);
     visibility: hidden;
     position: absolute;
 }
 
-@keyframes text_employee_1 {
+@include keyframes(text_employee_1) {
     50% {
         visibility: visible;
     }
@@ -500,12 +501,12 @@
 
 #text-boss-2 {
     @include animation-mixin(text_boss_2, 3s, 1, ease);
-    animation-delay: 16s;
+    @include animation-delay-mixin(16s);
     visibility: hidden;
     position: absolute;
 }
 
-@keyframes text_boss_2 {
+@include keyframes(text_boss_2) {
     50% {
         visibility: visible;
     }
@@ -513,12 +514,12 @@
 
 #text-employee-2 {
     @include animation-mixin(text_employee_2, 3s, 1, ease);
-    animation-delay: 19s;
+    @include animation-delay-mixin(19s);
     visibility: hidden;
     position: absolute;
 }
 
-@keyframes text_employee_2 {
+@include keyframes(text_employee_2) {
     50% {
         visibility: visible;
     }
@@ -526,12 +527,12 @@
 
 #text-employee-3 {
     @include animation-mixin(text_employee_3, 3s, 1, ease);
-    animation-delay: 22s;
+    @include animation-delay-mixin(22s);
     visibility: hidden;
     position: absolute;
 }
 
-@keyframes text_employee_3 {
+@include keyframes(text_employee_3) {
     50% {
         visibility: visible;
     }
@@ -539,12 +540,12 @@
 
 #text-boss-3 {
     @include animation-mixin(text_boss_3, 3s, 1, ease);
-    animation-delay: 25s;
+    @include animation-delay-mixin(25s);
     visibility: hidden;
     position: absolute;
 }
 
-@keyframes text_boss_3 {
+@include keyframes(text_boss_3) {
     50% {
         visibility: visible;
     }
@@ -552,12 +553,12 @@
 
 #text-employee-4 {
     @include animation-mixin(text_employee_4, 3s, 1, ease);
-    animation-delay: 28s;
+    @include animation-delay-mixin(28s);
     visibility: hidden;
     position: absolute;
 }
 
-@keyframes text_employee_4 {
+@include keyframes(text_employee_4) {
     50% {
         visibility: visible;
     }
@@ -565,13 +566,16 @@
 
 #text-boss-4 {
     @include animation-mixin(text_boss_4, 4s, 1, ease);
-    animation-delay: 31s;
+    @include animation-delay-mixin(31s);
     visibility: hidden;
     position: absolute;
 }
 
-@keyframes text_boss_4 {
+@include keyframes(text_boss_4) {
     50% {
         visibility: visible;
     }
 }
+
+
+
