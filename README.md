@@ -1,5 +1,5 @@
 # SVGAnimation
-SVG Animation (Head - Employee)
+SVG Animation (Interviewer - Candidate)
 
 <h2><b>Example: </b></h2>
 <br>
