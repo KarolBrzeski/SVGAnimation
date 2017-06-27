@@ -1,5 +1,19 @@
 .svg-image {
-    width: 900px;
+    position: realtive;
+    margin: 30px 10px 0px 10px;
+    @media #{$small} {
+        position: fixed;
+        width: 800px;
+        margin: 20px 50px 0px 50px;
+    }
+    @media #{$medium} {
+        width: 1000px;
+        margin: 20px 150px 0px 150px;
+    }
+    @media #{$large} {
+        width: 1200px;
+        margin: 0px 150px 0px 150px;
+    }
 }
 
 //************ EYES OF THE BOSS ************
@@ -28,15 +42,21 @@
     }
 }
 
-//************ EYE OF THE EMPLOYEE ************
-#eye {
-    @include animation-mixin(eye-employee, 10s, infinite, ease);
+//************ ARMCHAIR OF THE BOSS ************
+#red_armchair,
+#body,
+#arm_biceps,
+#shoulder,
+#neck,
+#legs {
+    @include animation-mixin(red_armchair, 3s, infinite, ease);
+    transform-origin: 50% 50%;
+    animation-delay: 13s;
 }
 
-@keyframes eye-employee {
-    60%,
-    61% {
-        visibility: hidden;
+@keyframes red_armchair {
+    50% {
+        transform: skewX(1deg);
     }
 }
 
@@ -52,13 +72,13 @@
 
 @keyframes smoke1 {
     50% {
-        transform: translate(2px, 5px);
+        transform: translate(3px, 6px);
     }
 }
 
 @keyframes smoke2 {
     50% {
-        transform: translate(3px, 4px);
+        transform: translate(4px, 5px);
     }
 }
 
@@ -159,7 +179,7 @@
 //************ PHONE ************
 #phone {
     @include animation-mixin(phone, 0.5s, 20, ease);
-    animation-delay: 8s;
+    animation-delay: 9s;
     transform-origin: 50% 50%;
 }
 
@@ -177,7 +197,7 @@
 #shadow_phone {
     .st10 {
         @include animation-mixin(phone-display, 1s, 10, ease);
-        animation-delay: 8s;
+        animation-delay: 9s;
     }
 }
 
@@ -228,6 +248,18 @@
 }
 
 // ******************************** Animation of the employee *******************************
+//************ EYE OF THE EMPLOYEE ************
+#eye {
+    @include animation-mixin(eye-employee, 10s, infinite, ease);
+}
+
+@keyframes eye-employee {
+    60%,
+    61% {
+        visibility: hidden;
+    }
+}
+
 //************ THE HEAD OF THE EMPLOYEE ************
 #ginger_head {
     @include animation-mixin(head-employee, 25s, 1, ease);
@@ -237,7 +269,7 @@
 
 @keyframes head-employee {
     50% {
-        transform: rotate(-15deg);
+        transform: rotate(-12deg);
     }
 }
 
@@ -271,8 +303,11 @@
 }
 
 @keyframes arm-employee {
+    23% {
+        transform: translate(-40px, -12px);
+    }
     50% {
-        transform: translate(-20px, -15px);
+        transform: translate(-20px, -12px);
     }
 }
 
@@ -284,7 +319,259 @@
 }
 
 @keyframes arm-shadow {
-    50% {
+    30% {
+        transform: rotate(38deg);
+    }
+    42% {
         transform: rotate(35deg);
+    }
+}
+
+// ******************************** Animation of the fly *******************************
+//************ FLY ************
+#fly {
+    @include animation-mixin(fly, 7s, 1, ease);
+    visibility: hidden;
+}
+
+@keyframes fly {
+    0% {
+        visibility: visible;
+    }
+    50% {
+        transform: translate(550px, -40px);
+    }
+    80% {
+        transform: translate(550px, -50px);
+    }
+    100% {
+        transform: translate(950px, -500px);
+    }
+}
+
+//************ FLY WINGS ************
+#wing_1 {
+    @include animation-mixin(wing_1, 0.5s, infinite, ease);
+    transform-origin: 50% 100%;
+}
+
+@keyframes wing_1 {
+    50% {
+        transform: rotate(20deg);
+    }
+}
+
+#wing_2 {
+    @include animation-mixin(wing_2, 0.5s, infinite, ease);
+    transform-origin: 100% 50%;
+}
+
+@keyframes wing_2 {
+    50% {
+        transform: rotate(-20deg);
+    }
+}
+
+//************ FLY LEGS ************
+#fly_legs {
+    @include animation-mixin(fly_legs, 1s, infinite, ease);
+    transform-origin: 100% 50%;
+}
+
+@keyframes fly_legs {
+    50% {
+        transform: rotate(15deg);
+    }
+}
+
+// ******************************** Animation of the pen *******************************
+// ************ PEN ************
+#pen {
+    @include animation-mixin(pen, 180s, 1, ease);
+    animation-delay: 8s;
+    transform: translate(310px, 30px);
+}
+
+@keyframes pen {
+    1% {
+        transform: translate(280px, 10px);
+    }
+    50% {
+        transform: translate(280px, 10px);
+    }
+    100% {
+        transform: translate(280px, 10px);
+    }
+}
+
+// ************ COLOR SHADOW PEN ************
+#shadow_pen,
+.st18 {
+    fill: #5F5F5F;
+    opacity: 0.8;
+}
+
+// ******************************** Animation of the clock *******************************
+//************ CLOCK ************
+#clock {
+    @include animation-mixin(clock, 11s, 1, ease);
+    transform-origin: 100% 50%;
+    visibility: hidden;
+}
+
+@keyframes clock {
+    0% {
+        visibility: visible;
+    }
+    35% {
+        transform: skewX(4deg);
+    }
+    50% {
+        transform: skewX(-4deg);
+    }
+    70% {
+        transform: translate(50px, 500px);
+    }
+    70%,
+    100% {
+        visibility: hidden;
+    }
+}
+
+// ************ TEXT ************
+.dialog {
+    margin-left: 20px;
+    margin-right: 20px;
+    @media #{$small} {
+        margin-left: 100px;
+    }
+    @media #{$medium} {
+        margin-left: 250px;
+    }
+    @media #{$large} {
+        margin-left: 350px;
+    }
+    #text-boss-1,
+    #text-employee-1,
+    #text-boss-2,
+    #text-employee-2,
+    #text-boss-3,
+    #text-employee-3,
+    #text-boss-4,
+    #text-employee-4 {
+        @media #{$small} {
+            max-width: 500px;
+        }
+    }
+    p {
+        font-family: $font-family-secondary;
+        font-size: 20px;
+        @media #{$medium} {
+            font-size: 28px;
+        }
+    }
+}
+
+#text-boss-1 {
+    @include animation-mixin(text_boss_1, 5s, 1, ease);
+    animation-delay: 3s;
+    visibility: hidden;
+    position: absolute;
+}
+
+@keyframes text_boss_1 {
+    50% {
+        visibility: visible;
+    }
+}
+
+#text-employee-1 {
+    @include animation-mixin(text_employee_1, 8s, 1, ease);
+    animation-delay: 8s;
+    visibility: hidden;
+    position: absolute;
+}
+
+@keyframes text_employee_1 {
+    50% {
+        visibility: visible;
+    }
+}
+
+#text-boss-2 {
+    @include animation-mixin(text_boss_2, 3s, 1, ease);
+    animation-delay: 16s;
+    visibility: hidden;
+    position: absolute;
+}
+
+@keyframes text_boss_2 {
+    50% {
+        visibility: visible;
+    }
+}
+
+#text-employee-2 {
+    @include animation-mixin(text_employee_2, 3s, 1, ease);
+    animation-delay: 19s;
+    visibility: hidden;
+    position: absolute;
+}
+
+@keyframes text_employee_2 {
+    50% {
+        visibility: visible;
+    }
+}
+
+#text-employee-3 {
+    @include animation-mixin(text_employee_3, 3s, 1, ease);
+    animation-delay: 22s;
+    visibility: hidden;
+    position: absolute;
+}
+
+@keyframes text_employee_3 {
+    50% {
+        visibility: visible;
+    }
+}
+
+#text-boss-3 {
+    @include animation-mixin(text_boss_3, 3s, 1, ease);
+    animation-delay: 25s;
+    visibility: hidden;
+    position: absolute;
+}
+
+@keyframes text_boss_3 {
+    50% {
+        visibility: visible;
+    }
+}
+
+#text-employee-4 {
+    @include animation-mixin(text_employee_4, 3s, 1, ease);
+    animation-delay: 28s;
+    visibility: hidden;
+    position: absolute;
+}
+
+@keyframes text_employee_4 {
+    50% {
+        visibility: visible;
+    }
+}
+
+#text-boss-4 {
+    @include animation-mixin(text_boss_4, 4s, 1, ease);
+    animation-delay: 31s;
+    visibility: hidden;
+    position: absolute;
+}
+
+@keyframes text_boss_4 {
+    50% {
+        visibility: visible;
     }
 }
